@@ -1,0 +1,139 @@
+- 👋 Hi, I’m @bandralotib
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+bandralotib/bandralotib is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+وثائق Node.js v5.12.0
+الفهرس | عرض في صفحة واحدة | عرض كـ JSON
+
+جدول المحتويات
+خيارات سطر الأوامر
+ملخص
+خيارات
+-vو--version
+-hو--help
+-eو--eval "script"
+-pو--print "script"
+-cو--check
+-iو--interactive
+-rو--require module
+--no-deprecation
+--trace-deprecation
+--throw-deprecation
+--trace-sync-io
+--zero-fill-buffers
+--track-heap-objects
+--zero-fill-buffers
+--prof-process
+--v8-options
+--tls-cipher-list=list
+--enable-fips
+--force-fips
+--icu-data-dir=file
+متغيرات البيئة
+NODE_DEBUG=module[,…]
+NODE_PATH=path[:…]
+NODE_DISABLE_COLORS=1
+NODE_ICU_DATA=file
+NODE_REPL_HISTORY=file
+خيارات سطر الأوامر#
+يأتي Node.js مع مجموعة متنوعة من خيارات CLI. تعرض هذه الخيارات تصحيح الأخطاء المضمّن وطرق متعددة لتنفيذ البرامج النصية وخيارات وقت تشغيل مفيدة أخرى.
+
+لعرض هذه الوثائق كصفحة دليل في جهازك ، قم بتشغيل man node.
+
+ملخص#
+node [options] [v8 options] [script.js | -e "script"] [arguments]
+
+node debug [script.js | -e "script" | <host>:<port>] …
+
+node --v8-options
+
+نفذ بدون وسيطات لبدء REPL .
+
+لمزيد من المعلومات حول node debug، الرجاء مراجعة وثائق مصحح الأخطاء .
+
+خيارات#
+-vو--version#
+نسخة عقدة الطباعة.
+
+-hو--help#
+طباعة خيارات سطر أوامر العقدة. ناتج هذا الخيار أقل تفصيلاً من هذا المستند.
+
+-eو--eval "script"#
+قم بتقييم الوسيطة التالية كـ JavaScript. يمكن أيضًا استخدام الوحدات النمطية المحددة مسبقًا في REPL في script.
+
+-pو--print "script"#
+مطابقة -eللنتيجة لكنها تطبعها.
+
+-cو--check#
+بناء الجملة تحقق من البرنامج النصي دون تنفيذ.
+
+-iو--interactive#
+يفتح REPL حتى لو كان لا يبدو أن stdin محطة.
+
+-rو--require module#
+التحميل المسبق للوحدة المحددة عند بدء التشغيل.
+
+يتبع require()قواعد قرار الوحدة النمطية. moduleقد يكون مسارًا لملف أو اسم وحدة عقدة.
+
+--no-deprecation#
+كتم صوت تحذيرات الإيقاف.
+
+--trace-deprecation#
+تتبعات مكدس الطباعة للإهمالات.
+
+--throw-deprecation#
+رمي الأخطاء للإهمال.
+
+--trace-sync-io#
+يطبع تتبع مكدس كلما تم اكتشاف إدخال / إخراج متزامن بعد أول منعطف لحلقة الحدث.
+
+--zero-fill-buffers#
+يملأ الصفر تلقائيًا جميع مثيلات Buffer و SlowBuffer المخصصة حديثًا .
+
+--track-heap-objects#
+Track heap object allocations for heap snapshots.
+
+--zero-fill-buffers#
+Automatically zero-fills all newly allocated Buffer and SlowBuffer instances.
+
+--prof-process#
+Process v8 profiler output generated using the v8 option --prof.
+
+--v8-options#
+Print v8 command line options.
+
+--tls-cipher-list=list#
+Specify an alternative default TLS cipher list. (Requires Node.js to be built with crypto support. (Default))
+
+--enable-fips#
+Enable FIPS-compliant crypto at startup. (Requires Node.js to be built with ./configure --openssl-fips)
+
+--force-fips#
+Force FIPS-compliant crypto on startup. (Cannot be disabled from script code.) (Same requirements as --enable-fips)
+
+--icu-data-dir=file#
+Specify ICU data load path. (overrides NODE_ICU_DATA)
+
+Environment Variables#
+NODE_DEBUG=module[,…]#
+','-separated list of core modules that should print debug information.
+
+NODE_PATH=path[:…]#
+':'-separated list of directories prefixed to the module search path.
+
+Note: on Windows, this is a ';'-separated list instead.
+
+NODE_DISABLE_COLORS=1#
+When set to 1 colors will not be used in the REPL.
+
+NODE_ICU_DATA=file#
+Data path for ICU (Intl object) data. Will extend linked-in data when compiled with small-icu support.
+
+NODE_REPL_HISTORY=file#
+Path to the file used to store the persistent REPL history. The default path is ~/.node_repl_history, which is overridden by this variable. Setting the value to an empty string ("" or " ") disables persistent REPL history.
